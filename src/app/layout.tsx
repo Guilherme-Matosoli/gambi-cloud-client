@@ -15,13 +15,20 @@ interface RootLayoutProps {
 const RootLayout: NextPage<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="pt-br">
-      <body className="relative overflow-hidden">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+      </head>
+
+      <body className="relative overflow-hidden bg-indigo-950">
         <Image
-          className="absolute left-0"
+          className="absolute left-0 z-0"
           src="/backgroundImage.svg"
           alt="Partículas"
           width={312}
           height={992}
+          draggable={false}
         />
 
         <BlurLight
@@ -30,11 +37,12 @@ const RootLayout: NextPage<RootLayoutProps> = ({ children }) => {
         />
 
         <Image
-          className="absolute right-0 bg"
+          className="absolute right-0 bg z-0"
           src="/backgroundImage.svg"
           alt="Partículas"
           width={312}
           height={992}
+          draggable={false}
         />
 
         <BlurLight
