@@ -11,8 +11,16 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "landing": "url('/backgroundImage.svg')"
       },
+      blur: {
+        "light": "calc(600px / 5)"
+      },
+      width: {
+        "light": "600px"
+      },
+      height: {
+        "light": "600px"
+      }
     },
   },
   plugins: [],
