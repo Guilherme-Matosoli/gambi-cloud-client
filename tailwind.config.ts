@@ -20,6 +20,15 @@ const config: Config = {
       },
       height: {
         "light": "600px"
+      },
+      borderColor: {
+        "op": "#23204F"
+      },
+      fontFamily: {
+        "montserrat": ["Montserrat", "sans-serif"]
+      },
+      boxShadow: {
+        "light": "0 0 5px 1px white"
       }
     },
   },
