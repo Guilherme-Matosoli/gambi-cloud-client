@@ -1,5 +1,7 @@
+import Image from 'next/image';
 import './globals.css';
 import type { Metadata, NextPage } from "next";
+import { BlurLight } from '@/components/BlurLight';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,8 +14,36 @@ interface RootLayoutProps {
 
 const RootLayout: NextPage<RootLayoutProps> = ({ children }) => {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="pt-br">
+      <body className="relative overflow-hidden">
+        <Image
+          className="absolute left-0"
+          src="/backgroundImage.svg"
+          alt="Partículas"
+          width={312}
+          height={992}
+        />
+
+        <BlurLight
+          position="left-0 bottom-20"
+          translate='-translate-x-1/3'
+        />
+
+        <Image
+          className="absolute right-0 bg"
+          src="/backgroundImage.svg"
+          alt="Partículas"
+          width={312}
+          height={992}
+        />
+
+        <BlurLight
+          position="right-0"
+          translate="translate-x-1/2"
+        />
+
+        {children}
+      </body>
     </html>
   );
 };
