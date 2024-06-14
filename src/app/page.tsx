@@ -1,7 +1,5 @@
-export default function Home() {
-  return (
-    <main>
+import { HomePage } from "./_home";
 
-    </main>
-  );
+export default function Home() {
+  return <HomePage />;
 }

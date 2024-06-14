@@ -1,3 +1,4 @@
+import './globals.css';
 import type { Metadata, NextPage } from "next";
 
 export const metadata: Metadata = {
