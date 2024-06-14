@@ -16,3 +16,11 @@
     text-wrap: balance;
   }
 }
+
+.anchor::after {
+  @apply content-[''] transition-all absolute bottom-0 right-1/2 w-0 h-px bg-white;
+}
+
+.anchor:hover::after {
+  @apply w-full right-0;
+}
