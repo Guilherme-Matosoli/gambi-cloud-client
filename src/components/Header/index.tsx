@@ -13,7 +13,7 @@ export const Header: React.FC = () => {
           />
         </a>
 
-        <nav className="text-white flex gap-10">
+        <nav className="text-white flex gap-10 max-phone:gap-3">
           <a target="_blank" href="https://github.com/Guilherme-Matosoli/gambi-cloud" className="cursor-pointer transition-all relative anchor max-mobile:text-xs">
             Repository
           </a>
