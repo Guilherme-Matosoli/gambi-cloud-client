@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import './globals.css';
 import type { Metadata, NextPage } from "next";
 import { BlurLight } from '@/components/BlurLight';
@@ -21,13 +20,11 @@ const RootLayout: NextPage<RootLayoutProps> = ({ children }) => {
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
       </head>
 
-      <body className="relative overflow-hidden bg-indigo-950">
-        <Image
-          className="absolute left-0 z-0"
+      <body className="relative bg-indigo-950">
+        <img
+          className="absolute h-full left-0 z-0"
           src="/backgroundImage.svg"
           alt="Partículas"
-          width={312}
-          height={992}
           draggable={false}
         />
 
@@ -36,12 +33,10 @@ const RootLayout: NextPage<RootLayoutProps> = ({ children }) => {
           translate='-translate-x-1/3'
         />
 
-        <Image
-          className="absolute right-0 bg z-0"
+        <img
+          className="absolute h-full right-0 bg z-0"
           src="/backgroundImage.svg"
           alt="Partículas"
-          width={312}
-          height={992}
           draggable={false}
         />
 
