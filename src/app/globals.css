@@ -27,11 +27,16 @@
 
 .gradient-text {
   background-color: white;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7175245098039216) 0%, rgba(255, 255, 255, 1) 53%, rgba(0, 0, 0, 0.7763480392156863) 100%);
+  background: linear-gradient(90deg, rgba(98, 98, 98, 0.7175245098039216) 0%, rgba(255, 255, 255, 1) 53%, rgba(98, 98, 98, 1) 100%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+
+.gradient-background {
+  background-image: linear-gradient(45deg, rgba(98, 98, 98, 0.2) 0%, rgba(255, 255, 255, 0.2) 53%, rgba(98, 98, 98, 0.2) 100%);
+  box-shadow: 0 0 15px 5px #a78bfa;
 }
 
 .image-drop {
