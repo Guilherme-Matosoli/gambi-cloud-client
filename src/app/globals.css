@@ -24,3 +24,16 @@
 .anchor:hover::after {
   @apply w-full right-0;
 }
+
+.gradient-text {
+  background-color: white;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7175245098039216) 0%, rgba(255, 255, 255, 1) 53%, rgba(0, 0, 0, 0.7763480392156863) 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.image-drop {
+  filter: drop-shadow(0 0 3rem #a78bfa);
+}
