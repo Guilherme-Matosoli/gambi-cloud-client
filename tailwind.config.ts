@@ -31,7 +31,8 @@ const config: Config = {
         "light": "0 0 5px 1px white"
       },
       screens: {
-        "mobile": "900px"
+        "mobile": "900px",
+        "phone": "600px"
       }
     },
   },
