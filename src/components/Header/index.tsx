@@ -23,7 +23,7 @@ export const Header: React.FC = () => {
           </a>
         </nav>
 
-        <Link href="" className="text-white px-8 py-2 rounded-full border border-white cursor-pointer transition-all hover:shadow-light max-mobile:hidden">
+        <Link href="/upload" className="text-white px-8 py-2 rounded-full border border-white cursor-pointer transition-all hover:shadow-light max-mobile:hidden">
           Get started
         </Link>
       </div>

@@ -18,7 +18,7 @@ export const HomePage = () => {
           <p className="text-center max-phone:text-xs">
             Armazene e compartilhe suas imagens diariamente com seus amigos
           </p>
-          <Link href="" className="font-montserrat font-medium text-xl bg-violet-900 cursor-pointer py-3 px-20 rounded-full transition-all hover:brightness-110 max-mobile:text-xs">
+          <Link href="/upload" className="font-montserrat font-medium text-xl bg-violet-900 cursor-pointer py-3 px-20 rounded-full transition-all hover:brightness-110 max-mobile:text-xs">
             COMEÇAR
           </Link>
         </section>
