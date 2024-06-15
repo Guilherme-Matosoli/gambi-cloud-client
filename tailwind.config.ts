@@ -29,6 +29,9 @@ const config: Config = {
       },
       boxShadow: {
         "light": "0 0 5px 1px white"
+      },
+      screens: {
+        "mobile": "900px"
       }
     },
   },
