@@ -1,5 +1,6 @@
 "use client";
 import { FileInput } from "@/components/FileInput";
+import { Input } from "@/components/Input";
 import { DragEvent, useState } from "react";
 
 const Upload = () => {
@@ -15,10 +16,12 @@ const Upload = () => {
 
   return (
     <main className="flex items-center justify-center w-full h-screen z-10">
-      <div className="flex flex-col items-center w-2/3 h-auto">
+      <div className="flex flex-col items-center w-auto h-auto">
         <h2 className="font-montserrat gradient-text text-5xl font-bold">
           Digite sua hash:
         </h2>
+
+        <Input />
 
         <FileInput onDropFunc={handleDrop} />
       </div>
