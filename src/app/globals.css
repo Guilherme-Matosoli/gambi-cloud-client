@@ -36,7 +36,10 @@
 
 .gradient-background {
   background-image: linear-gradient(45deg, rgba(98, 98, 98, 0.2) 0%, rgba(255, 255, 255, 0.2) 53%, rgba(98, 98, 98, 0.2) 100%);
-  box-shadow: 0 0 15px 5px #a78bfa;
+}
+
+.hover-input:hover {
+  box-shadow: 0 0 15px 3px #a78bfa;
 }
 
 .image-drop {
