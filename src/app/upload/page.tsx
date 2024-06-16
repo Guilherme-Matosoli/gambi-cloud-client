@@ -1,4 +1,5 @@
 "use client";
+import 'react-toastify/dist/ReactToastify.css';
 import { FileInput } from "@/components/FileInput";
 import { Header } from "@/components/Header";
 import { ImagePreview } from "@/components/ImagePreview";
@@ -6,6 +7,7 @@ import { Input } from "@/components/Input";
 import { LoadingIcon } from "@/components/LoadingIcon";
 import { api } from "@/services/api";
 import { DragEvent, FormEvent, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 const Upload = () => {
   const [image, setImage] = useState<File | null>();
@@ -28,7 +30,9 @@ const Upload = () => {
     setHash(result);
   };
 
-  const [promise, setPromise] = useState(true);
+  const notify = (msg: string) => toast(msg);
+
+  const [promise, setPromise] = useState(false);
   const handleUpload = async (e: FormEvent) => {
     setPromise(true);
     e.preventDefault();
@@ -39,23 +43,32 @@ const Upload = () => {
       formData.append('file', image);
       const response = await api.post(`/upload/${hash}`, formData);
 
-      console.log(response)
+      response.data.message == "Upload succesfully" ? notify("Upload concluído com sucesso!") : notify(response.data.message);
     }
     catch (err) {
       console.log(err);
     }
     finally {
-      setPromise(false)
+      setPromise(false);
+      setImage(null);
     };
   };
 
   return (
     <main className="flex flex-col items-center justify-between w-full h-screen">
       <Header />
+
+      <ToastContainer
+        position="top-center"
+        hideProgressBar
+        className="toast"
+        autoClose={3000}
+      />
+
       <div className="flex flex-1 justify-center items-center w-auto h-auto z-10 max-phone: pb-3">
         <form onSubmit={handleUpload} className="flex flex-col items-center gap-10 max-mobile:px-5">
           <div className="flex flex-col items-center gap-2">
-            <h2 className="font-montserrat gradient-text text-5xl font-bold text-center leading-snug">
+            <h2 className="font-montserrat gradient-text text-5xl font-bold text-center leading-snug" onClick={e => notify("vapo")}>
               Digite sua hash:
             </h2>
 
