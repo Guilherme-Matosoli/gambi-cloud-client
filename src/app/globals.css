@@ -51,7 +51,7 @@
 }
 
 .button {
-  @apply font-montserrat font-semibold text-white py-2 px-12 bg-indigo-700 rounded-xl transition-smooth;
+  @apply font-montserrat font-semibold text-white w-40 h-10 bg-indigo-700 rounded-xl transition-smooth;
   background-image: linear-gradient(45deg, rgba(98, 98, 98, 0.3) 0%, rgba(255, 255, 255, 0.3) 53%, rgba(98, 98, 98, 0.3) 100%);
 
   &:hover {
