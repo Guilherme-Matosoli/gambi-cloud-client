@@ -33,6 +33,9 @@ const config: Config = {
       screens: {
         "mobile": "900px",
         "phone": "600px"
+      },
+      transitionProperty: {
+        "smooth": ".3s"
       }
     },
   },
