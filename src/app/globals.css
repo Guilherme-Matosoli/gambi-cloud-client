@@ -58,3 +58,7 @@
     box-shadow: 0 0 10px 2px #6b21a8;
   }
 }
+
+.toast div {
+  @apply bg-indigo-300 text-white font-montserrat flex items-center justify-center;
+}
