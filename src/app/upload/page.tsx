@@ -45,14 +45,14 @@ const Upload = () => {
       const response = await api.post(`/upload/${hash}`, formData);
 
       response.data.message == "Upload succesfully" ? notify("Upload concluído com sucesso!") : notify(response.data.message);
+
     }
     catch (err) {
-      console.log(err);
       if (typeof err == "object" && err != null && 'response' in err) {
         const error = err.response as AxiosResponse;
         const errorMessage = error.data.message;
 
-        errorMessage == "File already exists" && notify("Arquivo já existente, modifique o nome e tente novamente.");
+        errorMessage == "File already exist" && notify("Arquivo já existente, modifique o nome e tente novamente.");
         errorMessage == "File extension not accept" || errorMessage == "Max size exceeded limit (2MB)" && notify("Arquivo não atende aos requisitos");
 
         errorMessage == "Internal Server error" && notify("Não foi possível completar a solicitação. Por favor, tente mais tarde.");
