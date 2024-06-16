@@ -1,5 +1,6 @@
 "use client";
 import { FileInput } from "@/components/FileInput";
+import { Header } from "@/components/Header";
 import { ImagePreview } from "@/components/ImagePreview";
 import { Input } from "@/components/Input";
 import { DragEvent, useState } from "react";
@@ -28,8 +29,9 @@ const Upload = () => {
   };
 
   return (
-    <main className="flex items-center justify-center w-full h-screen">
-      <div className="flex justify-center-center w-auto h-auto z-10">
+    <main className="flex flex-col items-center justify-between w-full h-screen">
+      <Header />
+      <div className="flex flex-1 justify-center items-center w-auto h-auto z-10 max-phone: pb-3">
         <form className="flex flex-col items-center gap-10 max-mobile:px-5">
           <div className="flex flex-col items-center gap-2">
             <h2 className="font-montserrat gradient-text text-5xl font-bold text-center leading-snug">
@@ -57,7 +59,7 @@ const Upload = () => {
               <FileInput onDropFunc={handleDrop} onChange={e => setImage(e.target.files)} />
           }
 
-          <button className="font-montserrat font-semibold text-white py-2 px-6 border border-white rounded-full transition-smooth hover-input">
+          <button className="button">
             Upload
           </button>
         </form>
