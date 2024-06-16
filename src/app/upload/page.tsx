@@ -29,10 +29,16 @@ const Upload = () => {
   return (
     <main className="flex items-center justify-center w-full h-screen z-10">
       <div className="flex justify-center-center w-auto h-auto">
-        <form className="flex flex-col items-center">
-          <h2 className="font-montserrat gradient-text text-5xl font-bold">
-            Digite sua hash:
-          </h2>
+        <form className="flex flex-col items-center gap-5">
+          <div className="flex flex-col items-center gap-2">
+            <h2 className="font-montserrat gradient-text text-5xl font-bold">
+              Digite sua hash:
+            </h2>
+
+            <span className="font-montserrat text-gray-400">
+              Você pode inserir manualmente ou gerar uma clicando no botão ao lado
+            </span>
+          </div>
 
           <Input
             placeholder="Digite sua hash"
