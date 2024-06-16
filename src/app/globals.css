@@ -60,5 +60,5 @@
 }
 
 .toast div {
-  @apply bg-indigo-300 text-white font-montserrat flex items-center justify-center;
+  @apply bg-indigo-300 text-white font-montserrat flex items-center justify-center text-center;
 }
