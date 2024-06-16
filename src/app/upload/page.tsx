@@ -8,6 +8,7 @@ import { LoadingIcon } from "@/components/LoadingIcon";
 import { api } from "@/services/api";
 import { DragEvent, FormEvent, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import { AxiosResponse } from 'axios';
 
 const Upload = () => {
   const [image, setImage] = useState<File | null>();
@@ -47,6 +48,15 @@ const Upload = () => {
     }
     catch (err) {
       console.log(err);
+      if (typeof err == "object" && err != null && 'response' in err) {
+        const error = err.response as AxiosResponse;
+        const errorMessage = error.data.message;
+
+        errorMessage == "File already exists" && notify("Arquivo já existente, modifique o nome e tente novamente.");
+        errorMessage == "File extension not accept" || errorMessage == "Max size exceeded limit (2MB)" && notify("Arquivo não atende aos requisitos");
+
+        errorMessage == "Internal Server error" && notify("Não foi possível completar a solicitação. Por favor, tente mais tarde.");
+      }
     }
     finally {
       setPromise(false);
