@@ -19,7 +19,7 @@ const Upload = () => {
     let result = '';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 50; i++) {
       result += characters.charAt(Math.floor(Math.random() * characters.length))
     };
 
