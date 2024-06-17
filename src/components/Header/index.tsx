@@ -6,7 +6,7 @@ export const Header: React.FC = () => {
       <div className="h-full w-3/4 flex items-center justify-between p-3 font-montserrat max-mobile:w-full">
         <a href="/">
           <img
-            src="./logo.svg"
+            src="/logo.svg"
             alt="GambiCloud"
             draggable={false}
             className="max-mobile:w-fit"
