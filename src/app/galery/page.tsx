@@ -1,15 +1,24 @@
+"use client";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Input } from "@/components/Input";
 import Link from "next/link";
+import { FormEvent, useState } from "react";
 
 
 const Galery = () => {
+  const [hash, setHash] = useState<string>();
+
+  const navigate = (e: FormEvent) => {
+    e.preventDefault();
+    window.location.href = `/galery/${hash}`;
+  };
+
   return (
     <main className="flex w-full h-screen flex-col items-center justify-between">
       <Header />
       <section className="w-auto h-full flex items-center justify-center">
-        <form className="flex flex-col items-center gap-10 max-mobile:px-5">
+        <form onSubmit={navigate} className="flex flex-col items-center gap-10 max-mobile:px-5">
           <div className="flex flex-col items-center gap-2">
             <h2 className="font-montserrat gradient-text text-5xl font-bold text-center leading-snug">
               Digite sua hash:
@@ -23,6 +32,8 @@ const Galery = () => {
           <Input
             placeholder="Digite sua hash"
             required
+            value={hash}
+            onChange={e => setHash(e.target.value)}
             hiddenButton
           />
 
