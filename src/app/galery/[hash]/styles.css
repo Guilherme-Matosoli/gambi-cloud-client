@@ -1,0 +1,15 @@
+.image-list {
+  max-height: calc(100vh - 84px - 24px - 20px - 200px);
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply bg-indigo-300;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-indigo-600;
+  }
+}

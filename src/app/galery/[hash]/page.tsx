@@ -1,4 +1,10 @@
 "use client";
+import './styles.css';
+
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { ImageCard } from "@/components/ImageCard";
+import { LoadingIcon } from "@/components/LoadingIcon";
 import { api } from "@/services/api";
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
@@ -15,6 +21,7 @@ interface Image {
 
 const ListImage: NextPage<ListImageParams> = ({ params: { hash } }) => {
   const [listImage, setListImage] = useState<Image[]>([]);
+  const [pending, setPending] = useState(true);
 
   const getImages = async () => {
     try {
@@ -23,6 +30,9 @@ const ListImage: NextPage<ListImageParams> = ({ params: { hash } }) => {
     }
     catch (err) {
       console.log(err);
+    }
+    finally {
+      setPending(false);
     };
   };
 
@@ -31,13 +41,26 @@ const ListImage: NextPage<ListImageParams> = ({ params: { hash } }) => {
   }, [hash]);
 
   return (
-    <p>
-      hash: {hash}
+    <main className="w-full h-screen flex flex-col items-center">
+      <Header />
 
-      <img
-        src={`http://localhost:4000/render/${hash}/${listImage[0]?.filename}`}
-      />
-    </p>
+      <section className="relative flex flex-col gap-5 w-2/3 h-full max-mobile:w-full">
+        {pending && <LoadingIcon />}
+
+        <h2 className="font-montserrat flex flex-col items-center gradient-text text-5xl font-bold text-center leading-snug">
+          Visualizando nuvem da hash:
+          <span className="text-xl">{hash}</span>
+        </h2>
+
+        <div className="image-list w-full flex flex-wrap justify-center overflow-y-scroll gap-2 py-2">
+          {
+            new Array(50).fill(1).map((i, index) => { console.log(i); return <ImageCard key={index} /> })
+          }
+        </div>
+      </section>
+
+      <Footer />
+    </main>
   )
 };
 
