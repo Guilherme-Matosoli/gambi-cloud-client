@@ -10,7 +10,8 @@ export const ImageCard: React.FC<ImageProps> = ({ filename, hash }) => {
   return (
     <div className="w-40 h-44 flex flex-col items-center justify-between p-2 bg-violet-900 rounded-xl">
       <img
-        src="/teste.jpg"
+        src={imageLink}
+        alt={filename}
         className="rounded-xl bg-white"
       />
 
