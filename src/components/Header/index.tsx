@@ -14,13 +14,13 @@ export const Header: React.FC = () => {
         </a>
 
         <nav className="text-white flex gap-10 max-phone:gap-3">
-          <a target="_blank" href="https://github.com/Guilherme-Matosoli/gambi-cloud" className="cursor-pointer transition-all relative anchor max-mobile:text-xs">
-            Repository
-          </a>
+          <Link href="/upload" className="cursor-pointer transition-all relative anchor max-mobile:text-xs">
+            Upload
+          </Link>
 
-          <a target="_blank" href="https://guilhermematos.vercel.app/" className="cursor-pointer transition-all relative anchor max-mobile:text-xs">
-            Developer
-          </a>
+          <Link href="/images" className="cursor-pointer transition-all relative anchor max-mobile:text-xs">
+            Images
+          </Link>
         </nav>
 
         <Link href="/upload" className="text-white px-8 py-2 rounded-full border border-white cursor-pointer transition-all hover:shadow-light max-mobile:hidden">
