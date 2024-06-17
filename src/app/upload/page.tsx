@@ -10,6 +10,7 @@ import { DragEvent, FormEvent, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { AxiosResponse } from 'axios';
 import { Footer } from '@/components/Footer';
+import { validateImage } from '@/utils/validateImage';
 
 const Upload = () => {
   const [image, setImage] = useState<File | null>();
@@ -18,7 +19,12 @@ const Upload = () => {
   const handleDrop = (e: DragEvent<HTMLLabelElement>) => {
     e.preventDefault();
 
-    if (e.dataTransfer.files[0]) setImage(e.dataTransfer.files[0]);
+    if (e.dataTransfer.files[0] && validateImage(e.dataTransfer.files[0])) {
+      setImage(e.dataTransfer.files[0]);
+      return;
+    };
+
+    notify("Formato e/ou tamanho do arquivo não aceitos.")
   };
 
   const randomizeHash = () => {
