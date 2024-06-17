@@ -18,7 +18,7 @@ export const ImagePreview: React.FC<ImagePreviewProps> = ({ imageSrc, imageName,
       <img
         src={imageSrc}
         alt={imageName}
-        className="z-10"
+        className="z-10 max-h-48"
       />
 
       <LoadingIcon />
