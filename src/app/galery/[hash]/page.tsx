@@ -52,7 +52,7 @@ const ListImage: NextPage<ListImageParams> = ({ params: { hash } }) => {
           <span className="text-xl">{hash}</span>
         </h2>
 
-        <div className="image-list w-full flex flex-wrap justify-center overflow-y-auto gap-2 py-2">
+        <div className="image-list w-full flex flex-wrap justify-center items-center overflow-y-auto gap-2 py-2">
           {
             listImage.map(image => {
               return <ImageCard key={image.filename} hash={hash} filename={image.filename} />
