@@ -18,8 +18,8 @@ export const Header: React.FC = () => {
             Upload
           </Link>
 
-          <Link href="/images" className="cursor-pointer transition-all relative anchor max-mobile:text-xs">
-            Images
+          <Link href="/galery" className="cursor-pointer transition-all relative anchor max-mobile:text-xs">
+            Galeria
           </Link>
         </nav>
 
