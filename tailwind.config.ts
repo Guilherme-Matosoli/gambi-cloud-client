@@ -36,6 +36,9 @@ const config: Config = {
       },
       transitionProperty: {
         "smooth": ".3s"
+      },
+      fontSize: {
+        "mini": "8px"
       }
     },
   },
