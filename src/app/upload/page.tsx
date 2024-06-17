@@ -9,6 +9,7 @@ import { api } from "@/services/api";
 import { DragEvent, FormEvent, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { AxiosResponse } from 'axios';
+import { Footer } from '@/components/Footer';
 
 const Upload = () => {
   const [image, setImage] = useState<File | null>();
@@ -110,6 +111,8 @@ const Upload = () => {
           </button>
         </form>
       </div>
+
+      <Footer />
     </main>
   );
 };
