@@ -107,7 +107,7 @@ const Upload = () => {
               ?
               <ImagePreview imageSrc={URL.createObjectURL(image)} imageName={image.name} onClick={() => setImage(null)} />
               :
-              <FileInput onDropFunc={handleDrop} onChange={e => {
+              <FileInput onDropFunc={handleDrop} required onChange={e => {
                 if (e.target.files && validateImage(e.target.files[0])) {
                   setImage(e.target.files[0])
                   return;
