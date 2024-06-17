@@ -85,7 +85,7 @@ const Upload = () => {
       <div className="flex flex-1 justify-center items-center w-auto h-auto z-10 max-phone: pb-3">
         <form onSubmit={handleUpload} className="flex flex-col items-center gap-10 max-mobile:px-5">
           <div className="flex flex-col items-center gap-2">
-            <h2 className="font-montserrat gradient-text text-5xl font-bold text-center leading-snug" onClick={e => notify("vapo")}>
+            <h2 className="font-montserrat gradient-text text-5xl font-bold text-center leading-snug">
               Digite sua hash:
             </h2>
 
