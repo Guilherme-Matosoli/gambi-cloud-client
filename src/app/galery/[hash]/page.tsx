@@ -7,6 +7,7 @@ import { ImageCard } from "@/components/ImageCard";
 import { LoadingIcon } from "@/components/LoadingIcon";
 import { api } from "@/services/api";
 import { NextPage } from "next";
+import Link from 'next/link';
 import { useEffect, useState } from "react";
 
 interface ListImageParams {
@@ -54,7 +55,15 @@ const ListImage: NextPage<ListImageParams> = ({ params: { hash } }) => {
 
         <div className="image-list w-full flex flex-wrap justify-center items-center overflow-y-auto gap-2 py-2">
           {
-            listImage.map(image => {
+            !pending && listImage.length < 1 && (
+              <span className="font-montserrat text-white text-center">
+                Esta hash não possui imagens, vá à <Link href="/upload" className="underline transition-smooth hover:brightness-90">página de upload</Link> e faça seu upload
+              </span>
+            )
+          }
+
+          {
+            listImage && listImage.map(image => {
               return <ImageCard key={image.filename} hash={hash} filename={image.filename} />
             })
           }
