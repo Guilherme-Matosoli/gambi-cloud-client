@@ -53,7 +53,7 @@ const ListImage: NextPage<ListImageParams> = ({ params: { hash } }) => {
           <span className="text-xl">{hash}</span>
         </h2>
 
-        <div className="image-list w-full flex flex-wrap justify-center items-center overflow-y-auto gap-2 py-2">
+        <div className="image-list w-full flex flex-wrap justify-center items-center overflow-y-auto gap-2 py-2 max-phone:px-3">
           {
             !pending && listImage.length < 1 && (
               <span className="font-montserrat text-white text-center">
