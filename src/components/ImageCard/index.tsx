@@ -11,12 +11,12 @@ export const ImageCard: React.FC<ImageProps> = ({ filename, hash }) => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <div className="w-60 min-h-52 flex flex-col items-center justify-between p-2 bg-violet-900 rounded-xl border border-white max-phone:w-full">
+    <div className="w-60 h-52 max-h-52 flex flex-col items-center justify-between p-2 bg-violet-900 rounded-xl border border-white max-phone:w-full max-phone:h-72 max-phone:max-h-80">
       <ImageModal imageSrc={imageLink} visible={visible} handleClose={() => setVisible(false)} />
       <img
         src={imageLink}
         alt={filename}
-        className="rounded-xl cursor-pointer bg-white border border-white transition-smooth hover-input"
+        className="rounded-xl object-cover max-h-32 w-full cursor-pointer bg-white border border-white transition-smooth hover-input max-phone:max-h-52"
         onClick={() => setVisible(true)}
       />
 
