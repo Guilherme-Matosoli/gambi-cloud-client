@@ -1,4 +1,4 @@
-export const validateImage = (image: File): boolean => {
+export const validateImage = (image: File) => {
   const maxSize = 2 * 1024 * 1024;
 
   const acceptedMimeTypes = [
@@ -11,9 +11,9 @@ export const validateImage = (image: File): boolean => {
     "image/tiff",
   ];
 
-  if (!acceptedMimeTypes.includes(image.type)) return false;
+  if (!acceptedMimeTypes.includes(image?.type)) return "format";
 
-  if (image.size > maxSize) return false;
+  if (image.size > maxSize) return "size";
 
   return true;
 };
