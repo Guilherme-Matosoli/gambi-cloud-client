@@ -59,6 +59,10 @@
   }
 }
 
-.toast div {
-  @apply bg-indigo-300 text-white font-montserrat flex items-center justify-center text-center;
+.toast-father .Toastify__toast {
+  @apply bg-indigo-800 text-white border border-white font-montserrat flex items-center justify-center text-center;
+}
+
+.toast-father .Toastify__close-button {
+  color: white;
 }
