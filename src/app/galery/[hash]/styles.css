@@ -1,7 +1,4 @@
-.image-list {
-  height: 100%;
-  max-height: calc(100vh - 84px - 24px - 20px - 200px);
-
+.scrollbar {
   &::-webkit-scrollbar {
     width: 5px;
   }
