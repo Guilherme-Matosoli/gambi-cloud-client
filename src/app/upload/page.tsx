@@ -78,7 +78,7 @@ const Upload = () => {
       <ToastContainer
         position="top-center"
         hideProgressBar
-        className="toast"
+        className="toast-father"
         autoClose={3000}
       />
 
