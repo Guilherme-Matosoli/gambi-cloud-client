@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Input } from "@/components/Input";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
+import { ToastContainer } from "react-toastify";
 
 
 const Galery = () => {
@@ -16,7 +17,15 @@ const Galery = () => {
 
   return (
     <main className="flex w-full h-screen flex-col items-center justify-between">
+      <ToastContainer
+        position="top-center"
+        hideProgressBar
+        className="toast-father"
+        autoClose={3000}
+      />
+
       <Header />
+
       <section className="w-auto h-full flex items-center justify-center z-10">
         <form onSubmit={navigate} className="flex flex-col items-center gap-10 max-mobile:px-5">
           <div className="flex flex-col items-center gap-2">
