@@ -107,15 +107,7 @@ const Upload = () => {
               ?
               <ImagePreview imageSrc={URL.createObjectURL(image)} imageName={image.name} onClick={() => setImage(null)} />
               :
-              <FileInput onDropFunc={handleDrop} required onChange={e => {
-                if (e.target.files && validateImage(e.target.files[0])) {
-                  setImage(e.target.files[0])
-                  return;
-                };
-
-                notify("Tamanho do arquivo excede o limite.")
-              }}
-              />
+              <FileInput onDropFunc={handleDrop} required onChangeFunc={e => e.target.files && setImage(e.target.files[0])} />
           }
 
           <button className="button relative">
