@@ -7,7 +7,7 @@ export const ImageCard: React.FC<ImageProps> = ({ filename, hash }) => {
   const imageLink = `${process.env.NEXT_PUBLIC_API_URL}/render/${hash}/${filename}`
 
   return (
-    <div className="w-60 h-52 flex flex-col items-center justify-between p-2 bg-violet-900 rounded-xl border border-white">
+    <div className="w-60 min-h-52 flex flex-col items-center justify-between p-2 bg-violet-900 rounded-xl border border-white max-phone:w-full">
       <img
         src={imageLink}
         alt={filename}
