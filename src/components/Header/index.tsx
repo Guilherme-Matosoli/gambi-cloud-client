@@ -9,16 +9,16 @@ export const Header: React.FC = () => {
             src="/logo.svg"
             alt="GambiCloud"
             draggable={false}
-            className="max-mobile:w-fit"
+            className="max-mobile:w-fit max-phone:w-36"
           />
         </a>
 
-        <nav className="text-white flex gap-10 max-phone:gap-3">
-          <Link href="/upload" className="cursor-pointer transition-all relative anchor max-mobile:text-xs">
+        <nav className="text-white flex gap-10 max-phone:gap-2">
+          <Link href="/upload" className="cursor-pointer transition-all relative font-medium anchor max-mobile:text-xl">
             Upload
           </Link>
 
-          <Link href="/galery" className="cursor-pointer transition-all relative anchor max-mobile:text-xs">
+          <Link href="/galery" className="cursor-pointer transition-all relative font-medium anchor max-mobile:text-xl">
             Galeria
           </Link>
         </nav>
