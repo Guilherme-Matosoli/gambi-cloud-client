@@ -45,10 +45,10 @@ const ListImage: NextPage<ListImageParams> = ({ params: { hash } }) => {
     <main className="w-full h-screen flex flex-col items-center">
       <Header />
 
-      <section className="relative flex flex-col gap-5 w-2/3 h-full max-mobile:w-full">
+      <section className="relative flex flex-col gap-5 w-2/3 h-full max-mobile:w-full max-phone: gap-2">
         {pending && <LoadingIcon />}
 
-        <h2 className="font-montserrat flex flex-col items-center gradient-text text-5xl font-bold text-center leading-snug">
+        <h2 className="font-montserrat flex flex-col items-center gradient-text text-5xl font-bold text-center leading-tight">
           Visualizando nuvem da hash:
           <span className="text-xl">{hash}</span>
         </h2>
