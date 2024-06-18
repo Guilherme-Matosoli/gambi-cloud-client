@@ -42,10 +42,10 @@ const ListImage: NextPage<ListImageParams> = ({ params: { hash } }) => {
   });
 
   return (
-    <main className="w-full min-h-screen h-screen flex flex-col items-center scrollbar">
+    <main className="w-full min-h-screen overflow-y-auto flex flex-col items-center scrollbar phone:h-screen">
       <Header />
 
-      <section className="relative flex flex-col px-2 gap-5 w-2/3 h-full overflow-y-auto max-mobile:w-full">
+      <section className="relative flex flex-col px-2 gap-5 w-2/3 h-full max-mobile:w-full">
         {pending && <LoadingIcon />}
 
         <h2 className="font-montserrat flex flex-col items-center gradient-text text-5xl font-bold text-center leading-tight">
