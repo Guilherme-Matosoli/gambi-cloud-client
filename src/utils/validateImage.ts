@@ -9,7 +9,6 @@ export const validateImage = (image: File): boolean => {
     "image/bmp",
     "image/webp",
     "image/tiff",
-    "image/svg+xml"
   ];
 
   if (!acceptedMimeTypes.includes(image.type)) return false;
