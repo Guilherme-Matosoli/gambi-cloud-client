@@ -43,7 +43,7 @@
 }
 
 .image-drop {
-  filter: drop-shadow(0 0 3rem #a78bfa);
+  filter: drop-shadow(0 0 1rem #a78bfa);
 }
 
 .input-focus:has(input:focus) {
