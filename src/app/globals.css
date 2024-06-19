@@ -51,7 +51,16 @@
 }
 
 .button {
-  @apply flex items-center justify-center font-montserrat font-semibold text-white w-40 h-10 bg-indigo-700 rounded-xl transition-smooth;
+  @apply flex items-center justify-center font-montserrat font-semibold text-white w-40 h-10 bg-indigo-700 rounded-xl transition-smooth max-phone:w-2/3;
+  background-image: linear-gradient(45deg, rgba(98, 98, 98, 0.3) 0%, rgba(255, 255, 255, 0.3) 53%, rgba(98, 98, 98, 0.3) 100%);
+
+  &:hover {
+    box-shadow: 0 0 10px 2px #6b21a8;
+  }
+}
+
+.button-light {
+  @apply flex items-center justify-center font-montserrat font-semibold text-black w-40 h-10 bg-white rounded-xl transition-smooth max-phone:w-2/3;
   background-image: linear-gradient(45deg, rgba(98, 98, 98, 0.3) 0%, rgba(255, 255, 255, 0.3) 53%, rgba(98, 98, 98, 0.3) 100%);
 
   &:hover {
@@ -65,4 +74,8 @@
 
 .toast-father .Toastify__close-button {
   color: white;
+}
+
+.text-18 {
+  font-size: 18px;
 }
