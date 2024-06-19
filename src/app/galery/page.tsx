@@ -8,7 +8,7 @@ import { ToastContainer } from "react-toastify";
 
 
 const Galery = () => {
-  const [hash, setHash] = useState<string>();
+  const [hash, setHash] = useState<string>("");
 
   const navigate = (e: FormEvent) => {
     e.preventDefault();
