@@ -25,7 +25,7 @@ const RootLayout: NextPage<RootLayoutProps> = ({ children }) => {
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
 
-      <body className="relative overflow-x-hidden bg-indigo-950">
+      <body className="relative overflow-x-hidden bg-black">
         <img
           className="absolute h-full left-0 z-0"
           src="/backgroundImage.svg"
