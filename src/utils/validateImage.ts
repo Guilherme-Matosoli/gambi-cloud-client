@@ -1,5 +1,5 @@
 export const validateImage = (image: File) => {
-  const maxSize = 2 * 1024 * 1024;
+  const maxSize = 5 * 1024 * 1024;
 
   const acceptedMimeTypes = [
     "image/jpeg",
